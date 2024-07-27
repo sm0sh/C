@@ -1,18 +1,39 @@
-#include<stdio.h>
-int factorial(int x);
+// #include<stdio.h>
+// int factorial(int x);
 
+// int main(){
+//     int a = 6;
+//     printf("The value of factorial %d is %d", a, factorial(a));
+//     return 0;
+// }
+
+// int factorial(int x){
+//     printf("Calling factorial (%d)\n", x);
+//     if (x==1 || x==0){
+//         return 1;
+//     }
+//     else{
+//         return x * factorial(x-1);
+//     }
+// }
+
+#include<stdio.h>
+void printPattern(int n);
 int main(){
-    int a = 6;
-    printf("The value of factorial %d is %d", a, factorial(a));
+    int n=4;
+    printPattern(n);
     return 0;
 }
 
-int factorial(int x){
-    printf("Calling factorial (%d)\n", x);
-    if (x==1 || x==0){
-        return 1;
+    void printPattern(int n){
+    if (n==1){
+        printf("*\n");
+        return;
     }
-    else{
-        return x * factorial(x-1);
+    printPattern(n-1);
+    for (int i = 0; i < (2*n-1); i++)
+    {
+       printf("*");
     }
+    printf("\n");
 }
