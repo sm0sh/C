@@ -17,23 +17,41 @@
 //     }
 // }
 
+// #include<stdio.h>
+// void printPattern(int n);
+// int main(){
+//     int n=4;
+//     printPattern(n);
+//     return 0;
+// }
+
+//     void printPattern(int n){
+//     if (n==1){
+//         printf("*\n");
+//         return;
+//     }
+//     printPattern(n-1);
+//     for (int i = 0; i < (2*n-1); i++)
+//     {
+//        printf("*");
+//     }
+//     printf("\n");
+// }
+
 #include<stdio.h>
 void printPattern(int n);
+
 int main(){
-    int n=4;
+    int n = 4;
     printPattern(n);
     return 0;
 }
 
-    void printPattern(int n){
-    if (n==1){
-        printf("*\n");
-        return;
+void printPattern(int n) {
+    for(int i = 1; i <= n; i++){
+        for(int j = 0; j < (2 * i - 1); j++){
+            printf("*");
+        }
+        printf("\n");
     }
-    printPattern(n-1);
-    for (int i = 0; i < (2*n-1); i++)
-    {
-       printf("*");
-    }
-    printf("\n");
 }
