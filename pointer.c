@@ -35,7 +35,7 @@ int main(){
     printf("The value of x and y after swap is %d and %d\n", x,y);
     return 0;
 }
-
+ 
 void wrong_swap(int a, int b){
     int temp;
     temp = a;
